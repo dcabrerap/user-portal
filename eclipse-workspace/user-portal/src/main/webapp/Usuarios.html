@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="user-portal" ng-controller="Usuarios">
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="ModuloUser.js"></script>
+	</head>
+
+	<body>
+		<div >
+			<div ng-repeat="user in usuarios">
+				<p>The ID is {{user.id}}</p>
+				<p>The content is {{user.firstName}}</p>
+			</div>	
+		</div>
+
+<br/>
+<form novalidate class="simple-form">
+    <label>Name: <input type="text" ng-model="usuarioNuevo.firstName" /></label><br />
+    <label>Last Name: <input type="text" ng-model="usuarioNuevo.lastName" /></label><br />
+    <label>E-mail: <input type="email" ng-model="usuarioNuevo.email" /></label><br />
+    <br />
+    <input type="button" ng-click="reset()" value="Reset" />
+    <input type="submit" ng-click="crearUsuario()" value="Save" />
+  </form>		
+	</body>
+</html>
