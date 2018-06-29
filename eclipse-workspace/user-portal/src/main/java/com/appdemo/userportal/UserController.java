@@ -13,11 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dcabrera.utils.logging.loggingUtil.Logger;
-import com.dcabrera.utils.logging.loggingUtil.LoggerFactory;
-import com.dcabrera.utils.logging.loggingUtil.LoggerType;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+
+//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @RequestMapping({"/api"})
 public class UserController {
@@ -42,7 +40,7 @@ public class UserController {
 
     @GetMapping
     public List findAll(){
-    	System.out.println(">>>>>>>>>>>>>>>>>id"+userService.findByEmailAddress("asdf@asf.co").getId());
+    	//System.out.println(">>>>>>>>>>>>>>>>>id"+userService.findByEmailAddress("asdf@asf.co").getId());
         return userService.findAll();
     }
 
